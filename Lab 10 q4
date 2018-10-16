@@ -1,0 +1,12 @@
+def get_max(t):
+    if(t == None):
+            return 0
+    else:
+        l = get_max(t.left)
+        r = get_max(t.right)
+    if(l>r and l>t.data):
+        return l
+    elif(r>l and r>t.data):
+        return r
+    else:
+        return t.data
